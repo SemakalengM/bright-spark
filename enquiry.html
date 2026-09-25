@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en-ZA">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Request a Quote | Bright Spark Electrical Services</title>
+  <meta name="description" content="Submit a service request or ask for a free electrical quote from Bright Spark Electrical Services.">
+  <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;700;800&amp;family=Source+Sans+3:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="brand" href="index.html">
+        <img src="images/logo.svg" alt="" width="42" height="42">
+        <span>Bright Spark<small>Electrical Services</small></span>
+      </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="main-nav">Menu</button>
+      <nav id="main-nav" class="main-nav" aria-label="Main">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="enquiry.html" aria-current="page">Enquiry</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="wires" aria-hidden="true"></div>
+  </header>
+
+  <main id="main" tabindex="-1">
+    <section class="page-head">
+      <div class="wrap">
+        <h1>Request a quote</h1>
+        <p>Tell us about the job and we will reply with a quote within one working day.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="wrap form-layout">
+        <div class="form-card">
+          <form id="enquiry-form" novalidate>
+            <div class="form-status" role="status" aria-live="polite" tabindex="-1"></div>
+
+            <fieldset>
+              <legend>Your details</legend>
+              <div class="field">
+                <label for="fullname">Full name</label>
+                <input type="text" id="fullname" name="fullname" autocomplete="name" aria-describedby="fullname-error" required>
+                <p class="error-msg" id="fullname-error"></p>
+              </div>
+              <div class="field-row">
+                <div class="field">
+                  <label for="email">Email address</label>
+                  <input type="email" id="email" name="email" autocomplete="email" aria-describedby="email-error" required>
+                  <p class="error-msg" id="email-error"></p>
+                </div>
+                <div class="field">
+                  <label for="phone">Phone number</label>
+                  <input type="tel" id="phone" name="phone" autocomplete="tel" placeholder="082 123 4567" aria-describedby="phone-error" required>
+                  <p class="error-msg" id="phone-error"></p>
+                </div>
+              </div>
+              <div class="field">
+                <span class="label" id="contact-pref-label">Preferred way to contact you</span>
+                <div class="choice-group" role="radiogroup" aria-labelledby="contact-pref-label">
+                  <label><input type="radio" name="contactpref" value="phone" checked> Phone call</label>
+                  <label><input type="radio" name="contactpref" value="whatsapp"> WhatsApp</label>
+                  <label><input type="radio" name="contactpref" value="email"> Email</label>
+                </div>
+              </div>
+            </fieldset>
+
+            <fieldset>
+              <legend>About the job</legend>
+              <div class="field-row">
+                <div class="field">
+                  <label for="service">Service needed</label>
+                  <select id="service" name="service" aria-describedby="service-error" required>
+                    <option value="">Choose a service</option>
+                    <option value="installations">Electrical installation</option>
+                    <option value="repairs">Electrical repair</option>
+                    <option value="wiring">House wiring</option>
+                    <option value="lighting">Lighting installation</option>
+                    <option value="maintenance">Maintenance or inspection</option>
+                    <option value="other">Something else</option>
+                  </select>
+                  <p class="error-msg" id="service-error"></p>
+                </div>
+                <div class="field">
+                  <label for="property">Property type</label>
+                  <select id="property" name="property">
+                    <option value="house">House</option>
+                    <option value="flat">Flat or townhouse</option>
+                    <option value="business">Business premises</option>
+                    <option value="newbuild">New build</option>
+                  </select>
+                </div>
+              </div>
+              <div class="field">
+                <label for="address">Street address and suburb</label>
+                <input type="text" id="address" name="address" autocomplete="street-address" aria-describedby="address-error" required>
+                <p class="error-msg" id="address-error"></p>
+              </div>
+              <div class="field-row">
+                <div class="field">
+                  <label for="date">Preferred date <span class="hint">(optional)</span></label>
+                  <input type="date" id="date" name="date" aria-describedby="date-error">
+                  <p class="error-msg" id="date-error"></p>
+                </div>
+                <div class="field">
+                  <label for="timeslot">Preferred time</label>
+                  <select id="timeslot" name="timeslot">
+                    <option value="any">Any time</option>
+                    <option value="morning">Morning (07:30–12:00)</option>
+                    <option value="afternoon">Afternoon (12:00–17:00)</option>
+                  </select>
+                </div>
+              </div>
+              <div class="field">
+                <label for="details">Describe the job</label>
+                <textarea id="details" name="details" maxlength="800" placeholder="For example: the kitchen plug points trip the earth leakage when the kettle is switched on." aria-describedby="details-error details-count" required></textarea>
+                <p class="char-count" id="details-count"></p>
+                <p class="error-msg" id="details-error"></p>
+              </div>
+              <div class="field">
+                <div class="choice-group">
+                  <label><input type="checkbox" id="urgent" name="urgent" value="yes"> This is urgent (no power or a safety risk)</label>
+                </div>
+              </div>
+            </fieldset>
+
+            <div class="field">
+              <div class="choice-group">
+                <label><input type="checkbox" id="consent" name="consent" value="yes" aria-describedby="consent-error"> I agree that Bright Spark may contact me about this enquiry.</label>
+              </div>
+              <p class="error-msg" id="consent-error"></p>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Send enquiry</button>
+          </form>
+        </div>
+
+        <aside class="side-panel">
+          <h2>What happens next</h2>
+          <ul>
+            <li>We read your enquiry and reply within one working day.</li>
+            <li>For larger jobs we arrange a free site visit.</li>
+            <li>You receive a written, itemised quote.</li>
+            <li>Once you accept, we book a date that suits you.</li>
+          </ul>
+          <div class="emergency">
+            <h3>Power off or a safety risk?</h3>
+            <p>Do not wait for a reply. Call our 24-hour emergency line:</p>
+            <a href="tel:+27827891600">082 789 1600</a>
+          </div>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wires" aria-hidden="true"></div>
+    <div class="wrap footer-grid">
+      <div>
+        <h2>Bright Spark Electrical Services</h2>
+        <p>Registered electrical contractors serving homes and small businesses in Polokwane and surrounding areas.</p>
+      </div>
+      <div>
+        <h2>Pages</h2>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="enquiry.html">Request a quote</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2>Get in touch</h2>
+        <ul>
+          <li>Phone and emergencies: <a href="tel:+27827891600">082 789 1600</a></li>
+          <li><a href="mailto:semakalengmokgwatjana@gmail.co.za">semakalengmokgwatjana@gmail.co.za</a></li>
+          <li>Mon–Fri 07:30–17:00, Sat 08:00–13:00</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="wrap">
+        <p>&copy; <span id="year">2026</span> Bright Spark Electrical Services. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <button class="to-top" type="button" aria-label="Back to top">&uarr;</button>
+  <script src="js/script.js"></script>
+</body>
+</html>

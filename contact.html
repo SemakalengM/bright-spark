@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en-ZA">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contact | Bright Spark Electrical Services</title>
+  <meta name="description" content="Contact details, business hours, service areas and contact form for Bright Spark Electrical Services.">
+  <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;700;800&amp;family=Source+Sans+3:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="brand" href="index.html">
+        <img src="images/logo.svg" alt="" width="42" height="42">
+        <span>Bright Spark<small>Electrical Services</small></span>
+      </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="main-nav">Menu</button>
+      <nav id="main-nav" class="main-nav" aria-label="Main">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="enquiry.html">Enquiry</a></li>
+          <li><a href="contact.html" aria-current="page">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="wires" aria-hidden="true"></div>
+  </header>
+
+  <main id="main" tabindex="-1">
+    <section class="page-head">
+      <div class="wrap">
+        <h1>Contact us</h1>
+        <p>Call, email or visit our workshop. We are happy to help.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="wrap contact-grid">
+        <div>
+          <h2>Contact details</h2>
+          <ul class="contact-list">
+            <li><strong>Phone and 24-hour emergency line</strong><a href="tel:+27827891600">082 789 1600</a></li>
+            <li><strong>Email</strong><a href="mailto:semakalengmokgwatjana@gmail.co.za">semakalengmokgwatjana@gmail.co.za</a></li>
+            <li><strong>Workshop</strong>12 Example Street, Industria, Polokwane, 0699</li>
+          </ul>
+
+          <h2>Business hours</h2>
+          <p id="open-status" class="open-status" aria-live="polite">Checking hours</p>
+          <table class="hours">
+            <caption class="visually-hidden">Business hours</caption>
+            <tbody>
+              <tr data-day="1"><th scope="row">Monday</th><td>07:30 – 17:00</td></tr>
+              <tr data-day="2"><th scope="row">Tuesday</th><td>07:30 – 17:00</td></tr>
+              <tr data-day="3"><th scope="row">Wednesday</th><td>07:30 – 17:00</td></tr>
+              <tr data-day="4"><th scope="row">Thursday</th><td>07:30 – 17:00</td></tr>
+              <tr data-day="5"><th scope="row">Friday</th><td>07:30 – 17:00</td></tr>
+              <tr data-day="6"><th scope="row">Saturday</th><td>08:00 – 13:00</td></tr>
+              <tr data-day="0"><th scope="row">Sunday and public holidays</th><td>Emergencies only</td></tr>
+            </tbody>
+          </table>
+
+          <h2 style="margin-top:2rem">Areas we serve</h2>
+          <ul class="areas">
+            <li>Polokwane CBD</li><li>Bendor</li><li>Flora Park</li><li>Fauna Park</li><li>Westenburg</li><li>Seshego</li><li>Mankweng</li><li>Ladanna</li><li>Nirvana</li>
+          </ul>
+
+          <div class="map-frame">
+            <iframe title="Map showing Polokwane" loading="lazy" src="https://www.openstreetmap.org/export/embed.html?bbox=29.40%2C-23.95%2C29.52%2C-23.86&amp;layer=mapnik"></iframe>
+          </div>
+        </div>
+
+        <div class="form-card">
+          <h2>Send us a message</h2>
+          <p>For quotes, please use the <a href="enquiry.html">enquiry form</a> so we get all the details we need.</p>
+          <form id="contact-form" novalidate>
+            <div class="form-status" role="status" aria-live="polite" tabindex="-1"></div>
+            <div class="field">
+              <label for="cname">Name</label>
+              <input type="text" id="cname" name="cname" autocomplete="name" aria-describedby="cname-error" required>
+              <p class="error-msg" id="cname-error"></p>
+            </div>
+            <div class="field">
+              <label for="cemail">Email address</label>
+              <input type="email" id="cemail" name="cemail" autocomplete="email" aria-describedby="cemail-error" required>
+              <p class="error-msg" id="cemail-error"></p>
+            </div>
+            <div class="field">
+              <label for="cphone">Phone number <span class="hint">(optional)</span></label>
+              <input type="tel" id="cphone" name="cphone" autocomplete="tel" aria-describedby="cphone-error">
+              <p class="error-msg" id="cphone-error"></p>
+            </div>
+            <div class="field">
+              <label for="subject">Subject</label>
+              <select id="subject" name="subject" aria-describedby="subject-error" required>
+                <option value="">Choose a subject</option>
+                <option value="general">General question</option>
+                <option value="booking">Existing booking</option>
+                <option value="invoice">Invoice or payment</option>
+                <option value="feedback">Feedback</option>
+              </select>
+              <p class="error-msg" id="subject-error"></p>
+            </div>
+            <div class="field">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" maxlength="600" aria-describedby="message-error message-count" required></textarea>
+              <p class="char-count" id="message-count"></p>
+              <p class="error-msg" id="message-error"></p>
+            </div>
+            <button type="submit" class="btn btn-primary">Send message</button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wires" aria-hidden="true"></div>
+    <div class="wrap footer-grid">
+      <div>
+        <h2>Bright Spark Electrical Services</h2>
+        <p>Registered electrical contractors serving homes and small businesses in Polokwane and surrounding areas.</p>
+      </div>
+      <div>
+        <h2>Pages</h2>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="enquiry.html">Request a quote</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2>Get in touch</h2>
+        <ul>
+          <li>Phone and emergencies: <a href="tel:+27827891600">082 789 1600</a></li>
+          <li><a href="mailto:semakalengmokgwatjana@gmail.co.za">semakalengmokgwatjana@gmail.co.za</a></li>
+          <li>Mon–Fri 07:30–17:00, Sat 08:00–13:00</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="wrap">
+        <p>&copy; <span id="year">2026</span> Bright Spark Electrical Services. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <button class="to-top" type="button" aria-label="Back to top">&uarr;</button>
+  <script src="js/script.js"></script>
+</body>
+</html>
